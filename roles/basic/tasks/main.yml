@@ -1,0 +1,18 @@
+ - name: Installing package apache
+   apt: pkg=apache2 state=latest
+
+ - name: Installing package MySQL
+   apt: pkg=mysql-server state=latest
+
+ - name: Installing package PHP
+   apt: pkg=php state=present 
+
+ - name: Installing package GIT
+   apt: pkg=git state=present
+  
+ - name: Adding repository NoviNano on VM
+   git:
+    repo=https://github.com/mplesha/NoviNano.git
+    dest=/var/www/laravel
+ 
+
